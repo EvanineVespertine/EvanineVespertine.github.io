@@ -15,8 +15,8 @@
             object-fit: cover;
         }
 
-        .content-wrapper { /*Text wrap*/
-        max-width: 60%; 
+        .content-wrapper {
+        max-width: 40%; 
         margin-left: 5%; 
         padding: 40px 0; 
     }
@@ -73,10 +73,8 @@
     const coverElement = document.getElementById("rotating-cover");
 
     function changeImage() {
-        // 1. Fade out
         coverElement.style.opacity = 0;
 
-        // 2. Wait for fade out (500ms), then swap and fade back in
         setTimeout(() => {
             currentIndex = (currentIndex + 1) % images.length;
             coverElement.src = images[currentIndex];
