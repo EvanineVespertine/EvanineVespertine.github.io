@@ -44,14 +44,21 @@
         ];
 
         let currentIndex = 0;
-        const coverElement = document.getElementById("rotating-cover");
+    const coverElement = document.getElementById("rotating-cover");
 
-        function changeImage() {
+    function changeImage() {
+        // 1. Fade out
+        coverElement.style.opacity = 0;
+
+        // 2. Wait for fade out (500ms), then swap and fade back in
+        setTimeout(() => {
             currentIndex = (currentIndex + 1) % images.length;
             coverElement.src = images[currentIndex];
-        }
+            coverElement.style.opacity = 1;
+        }, 1000); 
+    }
 
-        setInterval(changeImage, 5000);
+    setInterval(changeImage, 5000);
     </script>
 </body>
 </html>
