@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>3vanine</title>
@@ -10,35 +11,48 @@
     <style>
         #rotating-cover {
             transition: opacity 1s ease-in-out;
-            width: 100%; 
-            height: 300px; 
+            width: 100%;
+            height: 300px;
             object-fit: cover;
         }
 
         .main-layout {
-        display: flex;          /* This puts the columns side-by-side */
-        gap: 40px;              /* Adds space between the columns */
-        padding: 40px 5%;       /* Adds breathing room from the screen edges */
-        align-items: flex-start; /* Keeps the right side from stretching vertically */
-    }
+            display: flex;
+            /* This puts the columns side-by-side */
+            gap: 40px;
+            /* Adds space between the columns */
+            padding: 40px 5%;
+            /* Adds breathing room from the screen edges */
+            align-items: flex-start;
+            /* Keeps the right side from stretching vertically */
+        }
 
-    .text-column {
-        flex: 3;                /* Takes up 3 parts of the available space */
-        max-width: 60%;         /* Ensures it stops exactly where you want */
-    }
+        .text-column {
+            flex: 3;
+            /* Takes up 3 parts of the available space */
+            max-width: 60%;
+            position: relative;
+        }
 
-    .sidebar-column {
-        flex: 2;                /* Takes up the remaining 2 parts of space */
-    }
+        .headline-anchor {
+            width: 100%;
+            display: block;
+            margin-bottom: 20px;
+        }
 
-    h1 {
-        color: #b8c0ff;
-        font-family: monospace;
-        font-size: 80px;
-        text-align: right;
-        margin-bottom: 10px;
-        margin-right: 60px;
-        text-shadow: 0 0 5px #cdd2f8,
+        .sidebar-column {
+            flex: 2;
+            /* Takes up the remaining 2 parts of space */
+        }
+
+        h1 {
+            color: #b8c0ff;
+            font-family: monospace;
+            font-size: 80px;
+            text-align: right;
+            margin-bottom: 10px;
+            margin-right: 60px;
+            text-shadow: 0 0 5px #cdd2f8,
                 0 0 10px #b8c0ff,
                 0 0 20px #b8c0ff,
                 0 0 30px #b8c0ff,
@@ -46,36 +60,35 @@
                 0 0 55px #b8c0ff,
                 0 0 60px #b8c0ff,
                 0 0 70px #b8c0ff,
-    }
-
-    h3 {
-        color: #ffd6ff;
-        font-family: fantasy;
-        font-size: x-large;
-        text-align: right;
-        margin-top: 0;
-        margin-right: 740px;
-    }
-
-    h4 {
-        color: #e7c6ff;
-        font-family: fantasy;
-        font-size: large;
-        font-weight: 100; 
-    }
-
-    p {
-        color: #c0fdff;
-        font-family: monospace;
-        font-size: large;
-        text-align: left;
-        line-height: 1.6;
-    }
-
-        body{
-            background-color: rgb(7, 8, 9);
         }
 
+        h3 {
+            color: #ffd6ff;
+            font-family: fantasy;
+            font-size: x-large;
+            text-align: right;
+            margin-top: 0;
+            margin-right: 740px;
+        }
+
+        h4 {
+            color: #e7c6ff;
+            font-family: fantasy;
+            font-size: large;
+            font-weight: 100;
+        }
+
+        p {
+            color: #c0fdff;
+            font-family: monospace;
+            font-size: large;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        body {
+            background-color: rgb(7, 8, 9);
+        }
     </style>
 </head>
 
@@ -83,50 +96,69 @@
     <div class="cover-container">
         <img id="rotating-cover" src="coverpics/blueneb.jpg" alt="Cover Image">
     </div>
-<div class="main-layout">
-    <div class="text-column">
-    <h1>INTRO</h1>
-    <h3>About me</h3>
-    <p>Hi there! I'm Evanine, also known on multiple platforms as 301vr94. I'm interested in computer science, programming, typography, astronomy and quantum technology, but also visual arts, photography and literature as well as poetry.
-        Take a look at the pages linked below if you want to know more . Some other random stuff I do include reading mangas, my favorite being KnY or Demon Slayer. Recently, I have also watched all of the Hazbin Hotel episodes, which I
-        also really liked (especially because of the art style and great songs). Counterintuitivly, I don't actually read real books much, though novels that I have enjoyed include "The world that we knew" by Alice Hoffman, "Ender's Game" by
-        Orson Scott Card, "And then there were none" by Agatha Christie and "Tuck Everlasting" by Natalie Babbitt. Writing is also something I like doing in my free time (which barely exsists, but still). I have started writing a dualogy
-        called "Syynova", which all started off based on some characters I invented as a child. It's making slow and fortunately steady progress, I've already written a few random chapters in the second book and have done A TON of world-building,
-        which has been also been a lot of fun. If you're interested, be sure to check out more under Syynova. Anyways, I have been busy with school lately, als well as preparing for external events and competitions. A few days ago I just picked
-        up a dell monitor and have dissected it hehe. I was even able to successfully remove a chip from the ceramic casing without too much damage (check out Technology for more). So of course, I also do a healthy amount of daily gaming (around 1-3 h),
-        mostly on online games, my favorite so far is Rumble Rush. The "real" games I like to play most are both Portals, Black Mesa, Opus Magnum, Monument Valley, Hollow Knight and TF2. Well, anyways, I'm finally done yapping now. If you're still
-        interested, take a look at some of my other pages, articles and galleries (and meme collection). <br>
-        </p>
-    <h4>~3vanine :D</h4>
-    </div>
+    <div class="main-layout">
+        <div class="text-column">
+            <div class="headline-anchor">
+                <h1>INTRO</h1>
+                <h3>About me</h3>
+            </div>
+            <p>Hi there! I'm Evanine, also known on multiple platforms as 301vr94. I'm interested in computer science,
+                programming, typography, astronomy and quantum technology, but also visual arts, photography and
+                literature as well as poetry.
+                Take a look at the pages linked below if you want to know more . Some other random stuff I do include
+                reading mangas, my favorite being KnY or Demon Slayer. Recently, I have also watched all of the Hazbin
+                Hotel episodes, which I
+                also really liked (especially because of the art style and great songs). Counterintuitivly, I don't
+                actually read real books much, though novels that I have enjoyed include "The world that we knew" by
+                Alice Hoffman, "Ender's Game" by
+                Orson Scott Card, "And then there were none" by Agatha Christie and "Tuck Everlasting" by Natalie
+                Babbitt. Writing is also something I like doing in my free time (which barely exsists, but still). I
+                have started writing a dualogy
+                called "Syynova", which all started off based on some characters I invented as a child. It's making slow
+                and fortunately steady progress, I've already written a few random chapters in the second book and have
+                done A TON of world-building,
+                which has been also been a lot of fun. If you're interested, be sure to check out more under Syynova.
+                Anyways, I have been busy with school lately, als well as preparing for external events and
+                competitions. A few days ago I just picked
+                up a dell monitor and have dissected it hehe. I was even able to successfully remove a chip from the
+                ceramic casing without too much damage (check out Technology for more). So of course, I also do a
+                healthy amount of daily gaming (around 1-3 h),
+                mostly on online games, my favorite so far is Rumble Rush. The "real" games I like to play most are both
+                Portals, Black Mesa, Opus Magnum, Monument Valley, Hollow Knight and TF2. Well, anyways, I'm finally
+                done yapping now. If you're still
+                interested, take a look at some of my other pages, articles and galleries (and meme collection). <br>
+            </p>
+            <h4>~3vanine :D</h4>
+        </div>
 
-    <div class="sidebar-column">
-        <p>Space pour l'image ;D</p>
+        <div class="sidebar-column">
+            <p>Space pour l'image ;D</p>
+        </div>
     </div>
-</div>
 
     <script>
         const images = [
             "coverpics/blueneb.jpg",
             "coverpics/pinksupernovawithclouds.jpeg",
-            "coverpics/bluspace.jpg", 
+            "coverpics/bluspace.jpg",
             "coverpics/orionshortwaveln.png"
         ];
 
         let currentIndex = 0;
-    const coverElement = document.getElementById("rotating-cover");
+        const coverElement = document.getElementById("rotating-cover");
 
-    function changeImage() {
-        coverElement.style.opacity = 0;
+        function changeImage() {
+            coverElement.style.opacity = 0;
 
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % images.length;
-            coverElement.src = images[currentIndex];
-            coverElement.style.opacity = 1;
-        }, 1000); 
-    }
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                coverElement.src = images[currentIndex];
+                coverElement.style.opacity = 1;
+            }, 1000);
+        }
 
-    setInterval(changeImage, 5000);
+        setInterval(changeImage, 5000);
     </script>
 </body>
+
 </html>
