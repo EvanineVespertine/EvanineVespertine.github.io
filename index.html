@@ -36,10 +36,19 @@
         }
 
         .circle-image:hover {
-            transform: scale(1.5) rotate(360px);
+            transform: scale(1.4); 
+            transition: transform 0.3s ease-in-out;
             border-color: #ffd6ff;
             box-shadow: 0 0 20px #b8c0ff;
             cursor: pointer;
+        }
+
+        .circle-image:active {
+            transform: scale(1.35);
+            box-shadow: 
+            0 0 60px 30px #ffffff,
+            0 0 100px 60px #e7c6ff,
+            0 0 140px 90px #b8c0ff;
         }
 
         .main-layout {
