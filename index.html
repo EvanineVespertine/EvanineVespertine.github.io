@@ -198,6 +198,14 @@
 
         setInterval(changeImage, 7500);
 
+        const galacticPalette = [
+            '#b8c0ff', 
+            '#ffd6ff', 
+            '#e7c6ff', 
+            '#c0fdff', 
+            '#ffffff' 
+        ];
+
         const canvas = document.getElementById('confetti-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -215,7 +223,7 @@
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height - canvas.height; // Start above screen
                 this.size = Math.random() * 10 + 5;
-                this.color = `hsl(${Math.random() * 360}, 70%, 70%)`; // Galactic colors
+                this.color = galacticPalette[Math.floor(Math.random() * galacticPalette.length)];
                 this.speed = Math.random() * 3 + 2;
                 this.angle = Math.random() * 360;
                 this.rotationSpeed = Math.random() * 10 - 5;
@@ -225,6 +233,7 @@
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.angle * Math.PI / 180);
+                ctx.globalAlpha = Math.abs(Math.cos(this.angle * Math.PI / 180))
                 ctx.fillStyle = this.color;
 
                 // Drawing a Rhombus
