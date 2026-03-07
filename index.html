@@ -199,10 +199,13 @@
         setInterval(changeImage, 7500);
 
         const galacticPalette = [
-            '#b8c0ff', 
-            '#ffd6ff', 
-            '#e7c6ff', 
+            '#f72585', 
+            '#4cc9f0', 
             '#c0fdff', 
+            '#ffcbf2', 
+            '#b8c0ff',
+            '#e7c6ff',
+            '#c8b6ff',
             '#ffffff' 
         ];
 
@@ -250,34 +253,31 @@
             update() {
                 this.y += this.speed;
                 this.angle += this.rotationSpeed;
+                return this.y < canvas.height + this.size;
             }
         }
 
         function animateConfetti() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach((p, i) => {
-                p.update();
-                p.draw();
-                if (p.y > canvas.height) particles.splice(i, 1);
-            });
+            particles = particles.filter(p => p.update());
+            particles.forEach(p => p.draw());
             if (particles.length > 0) {
                 requestAnimationFrame(animateConfetti);
+            }
+            else {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
             }
         }
 
         // Trigger when the profile picture is clicked
         document.getElementById('profile-pic').addEventListener('click', () => {
-            // Create 100 rhombuses
-            for (let i = 0; i < 100; i++) {
+            const isrunningrn = particles.length > 0;
+            for (let i = 0; i < 120; i++) {
                 particles.push(new ConfettiParticle());
             }
-            animateConfetti();
-
-            // Clear everything after 5 seconds
-            setTimeout(() => {
-                particles = [];
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-            }, 5000);
+            if (!isrunningrn) {
+                animateConfetti();
+            }
         });
     </script>
 </body>
