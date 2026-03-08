@@ -83,6 +83,20 @@
             /* Takes up the remaining 2 parts of space */
         }
 
+        .glow {
+            color: white;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e7c6ff, 0 0 40px #e7c6ff, 0 0 50px #e7c6ff, 0 0 60px #e7c6ff, 0 0 70px #e7c6ff; 
+            }
+            to {
+                text-shadow: 0 0 20px #b8c0ff, 0 0 30px #b8c0ff, 0 0 40px #b8c0ff, 0 0 50px #b8c0ff, 0 0 60px #b8c0ff, 0 0 70px #b8c0ff, 0 0 80px #b8c0ff;
+            }
+        }
+
         h1 {
             color: #b8c0ff;
             font-family: monospace;
@@ -91,13 +105,6 @@
             margin-top: 0;
             margin-bottom: 10px;
             margin-right: 60px;
-            text-shadow: 0 0 5px #ffffff,
-                0 0 10px #b8c0ff,
-                0 0 20px #b8c0ff,
-                0 0 30px #b8c0ff,
-                0 0 40px #b8c0ff,
-                0 0 55px #b8c0ff,
-                0 0 70px #b8c0ff,
         }
 
         h3 {
@@ -141,7 +148,7 @@
     <div class="main-layout">
         <div class="text-column">
             <div class="headline-anchor">
-                <h1>INTRO</h1>
+                <h1 class="glow">INTRO</h1>
                 <h3>About me</h3>
             </div>
             <p>Hi there! I'm Evanine, also known on multiple platforms as 301vr94. I'm interested in computer science,
