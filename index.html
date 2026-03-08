@@ -237,8 +237,9 @@
             "coverpics/plurplegala.jpg"
         ];
 
-        let currentIndex = 0;
+        let currentIndex = Math.floor(Math.random() * images.length);
         const coverElement = document.getElementById("rotating-cover");
+        coverElement.src = images[currentIndex];
 
         function changeImage() {
             coverElement.style.opacity = 0;
