@@ -18,11 +18,12 @@
 
         #side-gif {
             width: 100%;
-            max-width: 600px;
+            /* max-width: 600px; */
             height: auto;
             border-radius: 10%;
             margin-top: 50px;
             margin-left: 0;
+            margin: 0 5%;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
@@ -66,11 +67,10 @@
         }
 
         .main-layout {
-            padding-top: 0px;
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
-            padding: 40px 8%;
+            column-gap: 80px;
+            padding: 0 8% 40px 8%;
             align-items: flex-start;
             justify-content: center;
         }
@@ -78,7 +78,7 @@
         .headline-anchor {
             width: 100%;
             display: block;
-            margin-bottom: 20px;
+            padding-right: 5%;
         }
 
         .text-column {
@@ -89,11 +89,9 @@
         }
 
         .sidebar-column {
-            flex: 1 1 350px;
+            flex: 1 1 450px;
             display: flex;
             justify-content: center;
-            margin-left: 65px;
-            margin-top: 220px;
         }
 
         .glow {
@@ -117,8 +115,6 @@
             text-align: right;
             margin-top: 0;
             margin-bottom: 10px;
-            margin-right: 5%;
-            padding-right: 5%;
         }
 
         h3 {
@@ -126,7 +122,7 @@
             font-family: fantasy;
             font-size: clamp(1.2rem, 3vw, 2rem);
             text-align: left;
-            margin-top: 0;
+            margin: 0;
         }
 
         h4 {
@@ -184,11 +180,11 @@
         <img id="profile-pic" src="withclobs.png" class="circle-image" alt="Profile Picture">
     </div>
     <div class="main-layout">
+        <div class="headline-anchor">
+            <h1 class="glow">INTRO</h1>
+            <h3>About me</h3>
+        </div>
         <div class="text-column">
-            <div class="headline-anchor">
-                <h1 class="glow">INTRO</h1>
-                <h3>About me</h3>
-            </div>
             <p>Hi there! I'm Evanine, also known on multiple platforms as 301vr94. I'm interested in computer science,
                 programming, typography, astronomy and quantum technology, but also visual arts, photography and
                 literature as well as poetry.
