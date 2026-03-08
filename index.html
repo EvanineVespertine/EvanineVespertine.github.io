@@ -18,11 +18,12 @@
 
         #side-gif {
             width: 100%;
-            max-width: 400px;
+            max-width: 600px;
             height: auto;
             border-radius: 10%;
             margin-top: 50px;
             margin-left: 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .header-section {
@@ -38,8 +39,8 @@
             object-position: center;
             border: 5px solid rgb(255, 255, 255);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            margin-top: -8vw;
-            margin-left: 8%;
+            margin-top: -5vw;
+            margin-left: 10%;
             position: relative;
             z-index: 100%;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -60,29 +61,29 @@
         .main-layout {
             padding-top: 0px;
             display: flex;
+            flex-wrap: wrap;
             gap: 40px;
-            padding-left: 5%;
-            padding-right: 5%;
+            padding: 40px 8%;
             align-items: flex-start;
+            justify-content: center;
         }
-
-        .text-column {
-            flex: 3;
-            /* Takes up 3 parts of the available space */
-            max-width: 45%;
-            min-width: 300px;
-            position: relative;
-        }
-
-        .headline-anchor {
+                .headline-anchor {
             width: 100%;
             display: block;
             margin-bottom: 20px;
         }
 
+        .text-column {
+            flex: 1 1 400px;
+            max-width: 100%;
+            position: relative;
+            padding-top: 20px;
+        }
+
         .sidebar-column {
-            flex: 2;
-            /* Takes up the remaining 2 parts of space */
+            flex: 1 1 350px;
+            display: flex;
+            justify-content: center;
         }
 
         .glow {
@@ -102,11 +103,12 @@
         h1 {
             color: #b8c0ff;
             font-family: monospace;
-            font-size: clamp(40px, 8vw, 80px);
+            font-size: clamp(50px, 10vw, 100px);
             text-align: right;
             margin-top: 0;
             margin-bottom: 10px;
             margin-right: 5%;
+            padding-right: 5%;
         }
 
         h3 {
