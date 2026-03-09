@@ -9,6 +9,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png?v=2">
     <style>
+
+        @font-face {
+            font-family: 'Orbitron';
+            src: url('fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         #rotating-cover {
             transition: opacity 1s ease-in-out;
             width: 100%;
@@ -73,6 +81,12 @@
             padding: 0 8% 40px 8%;
             align-items: flex-start;
             justify-content: center;
+        }
+
+        .cursive-head {
+            font-family: 'Orbitron', monospace;
+            color: #ffcbf2;
+            font-size: clamp(50px, 10vw, 100px);
         }
 
         .headline-anchor {
@@ -178,6 +192,9 @@
             <img id="rotating-cover" src="coverpics/blueneb.jpg" alt="Cover Image">
         </div>
         <img id="profile-pic" src="withclobs.png" class="circle-image" alt="Profile Picture">
+    </div>
+    <div class="cursive-head">
+        <h1>Evanine Vespertine</h1>
     </div>
     <div class="main-layout">
         <div class="headline-anchor">
