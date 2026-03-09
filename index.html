@@ -9,14 +9,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png?v=2">
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png?v=2">
     <style>
-
-        @font-face {
-            font-family: 'Orbitron';
-            src: url('fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Parisienne&display=swap');
         #rotating-cover {
             transition: opacity 1s ease-in-out;
             width: 100%;
@@ -46,6 +39,14 @@
             position: relative;
             width: 100%;
         }
+
+
+        /*.orbitron-<uniquifier> {
+            font-family: "Orbitron", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+        }*/
 
         .circle-image {
             width: clamp(120px, 15vw, 200px);
@@ -115,8 +116,9 @@
 
         @-webkit-keyframes glow {
             from {
-                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e7c6ff, 0 0 40px #e7c6ff, 0 0 50px #e7c6ff, 0 0 60px #e7c6ff, 0 0 70px #e7c6ff; 
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e7c6ff, 0 0 40px #e7c6ff, 0 0 50px #e7c6ff, 0 0 60px #e7c6ff, 0 0 70px #e7c6ff;
             }
+
             to {
                 text-shadow: 0 0 20px #b8c0ff, 0 0 30px #b8c0ff, 0 0 40px #b8c0ff, 0 0 50px #b8c0ff, 0 0 60px #b8c0ff, 0 0 70px #b8c0ff, 0 0 80px #b8c0ff;
             }
@@ -169,7 +171,8 @@
                 text-align: center;
             }
 
-            h1, h3 {
+            h1,
+            h3 {
                 text-align: center;
                 margin-right: 0;
             }
@@ -180,7 +183,6 @@
                 display: block;
             }
         }
-
     </style>
 </head>
 
@@ -193,9 +195,9 @@
         </div>
         <img id="profile-pic" src="withclobs.png" class="circle-image" alt="Profile Picture">
     </div>
-    <div class="cursive-head">
+    <!--<div class="cursive-head">
         <h1>Evanine Vespertine</h1>
-    </div>
+    </div>--> 
     <div class="main-layout">
         <div class="headline-anchor">
             <h1 class="glow">INTRO</h1>
@@ -267,9 +269,9 @@
 
         setInterval(changeImage, 7500);
 
-        const galacticPalette = [ 
-            '#c0fdff', 
-            '#ffcbf2', 
+        const galacticPalette = [
+            '#c0fdff',
+            '#ffcbf2',
             '#b8c0ff',
             '#e7c6ff',
             '#c8b6ff',
