@@ -84,11 +84,11 @@
             justify-content: center;
         }
 
-        .cursive-head {
+        /*.cursive-head {
             font-family: 'Orbitron', monospace;
             color: #ffcbf2;
             font-size: clamp(50px, 10vw, 100px);
-        }
+        }*/
 
         .headline-anchor {
             width: 100%;
@@ -106,12 +106,35 @@
         .sidebar-column {
             flex: 1 1 450px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
         }
 
         .glow {
             color: white;
             animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .external-links-one {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            text-align: left;
+            margin-top: 60px;
+            line-height: 2.7;
+        }
+
+        .external-links-one a {
+            color: #b8c0ff;
+            font-family: monospace;
+            font-size: clamp(8px, 15vw, 20px);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .external-links-one a:hover {
+            color: #717fe7;
         }
 
         @-webkit-keyframes glow {
@@ -239,6 +262,10 @@
 
         <div class="sidebar-column">
             <img id="side-gif" src="sonice.gif" alt="Side Gif">
+            <div class="external-links-one">
+            <a href="https://github.com/EvanineVespertine?tab=repositories" target="_blank"> >>> Take a look at my Github repositories</a>
+            <a href="https://monkeytype.com/profile/3vanine" target="_blank"> >>> See my progress on MonkeyType</a>
+        </div>
         </div>
     </div>
 
