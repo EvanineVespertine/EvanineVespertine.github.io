@@ -123,6 +123,19 @@
             text-shadow: 0 0 20px #b8c0ff;
         }
 
+        @font-face {
+            font-family: 'Orbitron';
+            src: url('fonts/Orbitron-VariableFont_wght.ttf') format('truetype');
+            font-weight: 100 900;
+            font-display: swap;
+        }
+
+        .spacethemed h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
         @-webkit-keyframes glow {
             from {
                 text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e7c6ff, 0 0 40px #e7c6ff, 0 0 50px #e7c6ff, 0 0 60px #e7c6ff, 0 0 70px #e7c6ff;
@@ -180,8 +193,7 @@
                 text-align: center;
             }
 
-            h1,
-            h3 {
+            h1, h3 {
                 text-align: center;
                 margin-right: 0;
             }
@@ -203,6 +215,9 @@
             <img id="rotating-cover" src="coverpics/blueneb.jpg" alt="Cover Image">
         </div>
         <img id="profile-pic" src="withclobs.png" class="circle-image" alt="Profile Picture">
+        <div class="spacethemed">
+            <h1>Evanine Vespertine</h1>
+        </div>
     </div>
     <div class="main-layout">
         <div class="headline-anchor">
