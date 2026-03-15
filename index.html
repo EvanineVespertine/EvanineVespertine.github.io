@@ -47,10 +47,10 @@
             object-position: center;
             border: 5px solid rgb(255, 255, 255);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            margin-top: -5vw;
+            margin-top: -8vw;
             margin-left: 7%;
             position: relative;
-            z-index: 100%;
+            z-index: 100;
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
 
@@ -130,15 +130,26 @@
             font-display: swap;
         }
 
+        .spacethemed {
+            position: relative;
+            min-height: 150px;
+        }
+
         .spacethemed h1 {
             font-family: 'Orbitron', sans-serif;
+            position: absolute;
+            left: calc(7% + clamp(100px, 18vw, 220px) + 2vw);
+            top: 40%;
+            transform: translateY(-50%);
+
             font-weight: 700;
-            font-size: clamp(2rem, 7vw, 6rem);
-            letter-spacing: 0.2vw;
-            text-align: center;
-            margin: 2vh auto;
+            font-size: clamp(1.2rem, 4vw, 3.5rem);
+            margin: 0;
+            letter-spacing: 0.1vw;
             color: #e0e0ff;
-            text-shadow: 0 0 10px rgb(180, 180, 255);
+            text-shadow: 0 0 10px rgba(180, 180, 255, 0.8);
+            z-index: 10;
+            white-space: nowrap;
         }
 
         @-webkit-keyframes glow {
@@ -196,6 +207,13 @@
             .text-column {
                 max-width: 90%;
                 text-align: center;
+            }
+
+            .spacethemed h1 {
+                white-space: normal;
+                left: calc(7% + clamp(100px, 18vw, 220px) + 15px);
+                width: 50%;
+                line-height: 1.1;
             }
 
             h1,
