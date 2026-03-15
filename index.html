@@ -47,7 +47,7 @@
             object-position: center;
             border: 5px solid rgb(255, 255, 255);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            margin-top: -8vw;
+            margin-top: -5vw;
             margin-left: 7%;
             position: relative;
             z-index: 100;
@@ -132,7 +132,11 @@
 
         .spacethemed {
             position: relative;
-            min-height: 150px;
+            width: 100%;
+            min-height: clamp(120px, 15vw, 200px);
+            background: #000;
+            display: flex;
+            align-items: center;
         }
 
         .spacethemed h1 {
