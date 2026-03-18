@@ -138,16 +138,22 @@
         .spacethemed h1 {
             font-family: 'Orbitron', sans-serif;
             position: absolute;
-            left: 440px;
-            top: -10%;
+
+            /* 1. POSITIONING: Increased min to 250px to safely clear the profile pic */
+            left: clamp(250px, 32vw, 440px);
+            top: 50%;
             transform: translateY(-50%);
+
+            /* 2. SIZE: Increased max to 5.5rem to match your screenshot's impact */
+            font-size: clamp(2rem, 6vw, 5.5rem);
+
             font-weight: 700;
-            font-size: clamp(2rem, 7vw, 6rem);
             margin: 0;
-            letter-spacing: 0.2vw;
-            text-align: center;
+            letter-spacing: 0.1vw;
+            text-align: left;
+            /* Changed to left so it grows away from the pfp */
             color: #e0e0ff;
-            text-shadow: 0 0 10px rgb(180, 180, 255);
+            text-shadow: 0 0 15px rgba(184, 192, 255, 0.8);
             z-index: 10;
             white-space: nowrap;
         }
@@ -198,8 +204,36 @@
             background-color: rgb(7, 8, 9);
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 1100px) {
+            .spacethemed {
+                
+                display: block;
+                padding-top: 80px;
+                
+                text-align: center;
+            }
+
+            .spacethemed h1 {
+                position: relative;
+                
+                left: 0;
+              
+                top: 0;
+              
+                transform: none;
+              
+
+                margin: 20px auto;
+         
+                font-size: clamp(1.5rem, 8vw, 3rem);
+           
+                white-space: normal;
+             
+                width: 90%;
+            }
+
             .main-layout {
+                padding-top: 20px;
                 flex-direction: column;
                 align-items: center;
             }
